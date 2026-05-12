@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import { usePortfolio } from "@/context/PortfolioContext";
 import { cn } from "@/lib/utils";
@@ -18,6 +18,13 @@ const skills = [
 
 export function SkillsGraph() {
   const { isRecruiterMode } = usePortfolio();
+
+  const skillAnimations = useMemo(() => {
+    return skills.map(() => ({
+      duration: 3 + Math.random() * 2,
+      delay: Math.random() * 2,
+    }));
+  }, []);
 
   if (isRecruiterMode) {
     return (
@@ -52,8 +59,7 @@ export function SkillsGraph() {
 
           <div className="flex flex-wrap justify-center gap-4 md:gap-8 max-w-4xl z-10 relative">
             {skills.map((skill, index) => {
-              const randomDuration = 3 + Math.random() * 2;
-              const randomDelay = Math.random() * 2;
+              const { duration, delay } = skillAnimations[index];
 
               return (
                 <motion.div
@@ -70,8 +76,8 @@ export function SkillsGraph() {
                   transition={{
                     opacity: { duration: 0.5, delay: index * 0.1 },
                     scale: { duration: 0.5, delay: index * 0.1, type: "spring" },
-                    y: { duration: randomDuration, repeat: Infinity, ease: "easeInOut", delay: randomDelay },
-                    x: { duration: randomDuration + 0.5, repeat: Infinity, ease: "easeInOut", delay: randomDelay }
+                    y: { duration: duration, repeat: Infinity, ease: "easeInOut", delay: delay },
+                    x: { duration: duration + 0.5, repeat: Infinity, ease: "easeInOut", delay: delay }
                   }}
                   className={cn(
                     "cursor-grab active:cursor-grabbing w-24 h-24 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center bg-black/40 backdrop-blur-md border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.3)] transition-colors hover:border-blue-500/50 hover:bg-blue-500/5",
