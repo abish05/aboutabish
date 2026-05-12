@@ -1,10 +1,43 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 export function Contact() {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      const response = await fetch("https://formspree.io/f/xjgllepl", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setMessage("Message received. I'll get back to you shortly!");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        const data = await response.json();
+        setStatus("error");
+        setMessage(data.errors?.[0]?.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatus("error");
+      setMessage("Network error. Please check your connection.");
+    }
+  };
+
   return (
     <section id="contact" className="pt-10 scroll-mt-24">
       <motion.div
@@ -56,12 +89,14 @@ export function Contact() {
             </div>
           </div>
 
-          <form className="glass-panel p-6 rounded-2xl flex flex-col gap-4">
+          <form onSubmit={handleSubmit} className="glass-panel p-6 rounded-2xl flex flex-col gap-4 relative overflow-hidden">
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-sm text-gray-400 font-mono">Name</label>
               <input 
                 type="text" 
                 id="name" 
+                name="name"
+                required
                 className="bg-black/40 border border-white/10 rounded-lg p-3 text-gray-200 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                 placeholder="John Doe"
               />
@@ -71,6 +106,8 @@ export function Contact() {
               <input 
                 type="email" 
                 id="email" 
+                name="email"
+                required
                 className="bg-black/40 border border-white/10 rounded-lg p-3 text-gray-200 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                 placeholder="john@example.com"
               />
@@ -79,6 +116,8 @@ export function Contact() {
               <label htmlFor="message" className="text-sm text-gray-400 font-mono">Message</label>
               <textarea 
                 id="message" 
+                name="message"
+                required
                 rows={4}
                 className="bg-black/40 border border-white/10 rounded-lg p-3 text-gray-200 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all custom-scrollbar"
                 placeholder="Hello Abish..."
@@ -86,12 +125,35 @@ export function Contact() {
             </div>
             
             <button 
-              type="button"
-              className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all shadow-[0_0_15px_rgba(0,112,243,0.2)] hover:shadow-[0_0_25px_rgba(0,112,243,0.4)] active:scale-[0.98]"
+              type="submit"
+              disabled={status === "loading"}
+              className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all shadow-[0_0_15px_rgba(0,112,243,0.2)] hover:shadow-[0_0_25px_rgba(0,112,243,0.4)] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Send size={18} />
-              Transmit Message
+              {status === "loading" ? (
+                <>
+                  <Loader2 size={18} className="animate-spin" />
+                  Transmitting...
+                </>
+              ) : (
+                <>
+                  <Send size={18} />
+                  Transmit Message
+                </>
+              )}
             </button>
+
+            {status !== "idle" && status !== "loading" && (
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`mt-4 p-4 rounded-lg flex items-center gap-3 ${
+                  status === "success" ? "bg-green-500/10 text-green-400 border border-green-500/20" : "bg-red-500/10 text-red-400 border border-red-500/20"
+                }`}
+              >
+                {status === "success" ? <CheckCircle2 size={18} /> : <AlertCircle size={18} />}
+                <p className="text-sm">{message}</p>
+              </motion.div>
+            )}
           </form>
         </div>
       </motion.div>
