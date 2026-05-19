@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Activity, Layers } from "lucide-react";
@@ -16,6 +14,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   imagePlaceholder: string;
+  imageUrl?: string;
 }
 
 interface ProjectModalProps {
@@ -65,7 +64,12 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             </button>
 
             {/* Header Image Placeholder */}
-            <div className={`w-full h-48 md:h-64 ${project.imagePlaceholder} rounded-t-2xl flex items-center justify-center relative overflow-hidden`}>
+            <div className="w-full h-48 md:h-64 rounded-t-2xl flex items-center justify-center relative overflow-hidden">
+               {project.imageUrl ? (
+                 <img src={project.imageUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+               ) : (
+                 <div className={`absolute inset-0 ${project.imagePlaceholder}`} />
+               )}
                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent z-0"></div>
                <h2 className="text-3xl md:text-5xl font-bold text-white z-10 drop-shadow-lg">{project.title}</h2>
             </div>
