@@ -40,7 +40,8 @@ const projectsData: Project[] = [
     techStack: ["HTML5", "CSS3", "JavaScript", "Vercel"],
     githubUrl: "https://github.com/abish05",
     liveUrl: "https://shining-star-nu.vercel.app",
-    imagePlaceholder: "bg-gradient-to-br from-cyan-900 to-black"
+    imagePlaceholder: "bg-gradient-to-br from-cyan-900 to-black",
+    imageUrl: "/images/shining_star.png"
   },
   {
     id: "fti-website",
