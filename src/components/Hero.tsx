@@ -40,7 +40,7 @@ export function Hero() {
               download="Abish_Resume.jpg"
               className="group relative inline-flex items-center justify-center px-8 py-3 font-medium text-white bg-blue-600 rounded-lg overflow-hidden transition-all duration-300 hover:bg-blue-700 hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(0,112,243,0.3)] hover:shadow-[0_0_30px_rgba(0,112,243,0.5)]"
             >
-              <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
+              <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-linear-to-b"></span>
               <span className="relative flex items-center gap-2">
                 <Download size={18} />
                 {isRecruiterMode ? "Download Resume" : "Access System.resume()"}
@@ -69,7 +69,7 @@ export function Hero() {
         </div>
 
         <div className="w-full max-w-xs mx-auto md:mx-0">
-          <div className="relative h-72 w-72 md:h-80 md:w-80 rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] bg-slate-900">
+          <div className="relative h-72 w-72 md:h-80 md:w-80 rounded-4xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] bg-slate-900">
             <Image
               src="/profile.jpg"
               alt="Abish A"
