@@ -44,14 +44,18 @@ export function Certifications() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="space-y-12"
       >
+        <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
+          <span className="text-blue-500">05.</span> Education & Certifications
+        </h2>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Education Column */}
           <div>
-            <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-              <span className="text-blue-500">06.</span> Education
-            </h2>
+            <h3 className="text-2xl font-bold mb-6 text-gray-200 flex items-center gap-2">
+              <GraduationCap size={24} className="text-blue-400" />
+              Education
+            </h3>
             <div className="space-y-6">
               {education.map((edu, i) => (
                 <div key={i} className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden">
@@ -77,9 +81,10 @@ export function Certifications() {
 
           {/* Certifications Column */}
           <div>
-            <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-              <span className="text-blue-500">07.</span> Certifications
-            </h2>
+            <h3 className="text-2xl font-bold mb-6 text-gray-200 flex items-center gap-2">
+              <Award size={24} className="text-blue-400" />
+              Certifications
+            </h3>
             <div className="space-y-6">
               {certifications.map((cert, i) => (
                 <div key={i} className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden">

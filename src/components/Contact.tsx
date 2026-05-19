@@ -46,7 +46,7 @@ export function Contact() {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-          <span className="text-blue-500">05.</span> Initialize Connection
+          <span className="text-blue-500">06.</span> Initialize Connection
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
