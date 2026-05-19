@@ -71,7 +71,7 @@ export function Hero() {
         <div className="w-full max-w-xs mx-auto md:mx-0">
           <div className="relative h-72 w-72 md:h-80 md:w-80 rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] bg-slate-900">
             <Image
-              src="/profile.jpg"
+              src="/profile.svg"
               alt="Abish A"
               fill
               className="object-cover"
