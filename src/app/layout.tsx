@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abish | AI Developer OS",
-  description: "AI & Full Stack Developer Portfolio",
+  title: "Abish A | Software Developer",
+  description: "Software Developer Portfolio of Abish A showcasing expertise in full stack development, network administration, and AI solutions.",
   openGraph: {
-    title: "Abish | AI Developer OS",
-    description: "Futuristic AI Developer Portfolio showcasing skills in Next.js, AI, and Cloud Computing.",
+    title: "Abish A | Software Developer",
+    description: "Futuristic Software Developer Portfolio of Abish A showcasing skills in web development, SaaS, and network fundamentals.",
     url: "https://abish.in",
     siteName: "Abish Portfolio",
     type: "website",

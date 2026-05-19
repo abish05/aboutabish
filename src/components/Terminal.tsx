@@ -50,31 +50,35 @@ export function Terminal() {
         );
         break;
       case "about":
-        output = "Motivated and detail-oriented graduate with strong knowledge of Networking and Python, seeking an entry-level role.";
+        output = "Motivated and detail-oriented Computer Science & Engineering student with strong knowledge of web development, software engineering, and network fundamentals. Experienced in building responsive web applications, designing SaaS platforms, and integrating AI-powered features.";
         break;
       case "skills":
-        output = "Networking, Routing & Switching, Network Security, System & Server Administration, Python, Cisco Packet Tracer, UI/UX Design";
+        output = "Networking Fundamentals, System & Server Administration, Git & GitHub, Generative AI, SaaS Application Development, Prompt Engineering, Cloud Computing Basics, Python, HTML/CSS/JavaScript, Responsive Design, Cross-browser Compatibility";
         break;
       case "projects":
         output = (
           <ul className="text-gray-300">
-            <li>1. Smart Code Reviewer using AI</li>
-            <li>2. AI-Powered Network Anomaly Detector</li>
-            <li>3. Endee.io Vector Database</li>
+            <li>1. CampusOS AI — Smart College & Placement Platform (React, Spring Boot, PostgreSQL, Gemini LLM)</li>
+            <li>2. Shining Star AC Service Website (HTML, CSS, JavaScript)</li>
+            <li>3. FTI Training Website (HTML, CSS, JavaScript, Vercel)</li>
+            <li>4. Smart Code Reviewer using AI (React, Python, Flask, OpenAI)</li>
           </ul>
         );
         break;
       case "experience":
-        output = "IT Manager @ TCS iON, Network Admin @ VSB, Junior UI/UX Designer @ Octet Design Studio";
+        output = "Freelance Web Developer @ FTI Training (2025) — Designed and developed a fully functional business website from scratch using HTML, CSS, JavaScript.";
         break;
       case "github":
-        output = "152 Pull Requests Merged, 14-day current streak. (Data simulated for demo purposes).";
+        output = "Active open-source contributions. Real-time metrics loaded dynamically via GitHub API on the main page.";
         break;
       case "resume":
-        output = "Initializing download sequence... (Ensure /resume.pdf exists in public directory)";
+        if (typeof window !== "undefined") {
+          window.open("/resume.jpg", "_blank");
+        }
+        output = "Opening Abish_Resume.jpg in a new tab...";
         break;
       case "contact":
-        output = "Email: abishstk@gmail.com | Phone: +91 7401608989 | LinkedIn: linkedin.com/in/abish-a-a12b30388";
+        output = "Email: abishstk@gmail.com | Phone: 7401608989 | LinkedIn: linkedin.com/in/abish-a-a12b30388 | Site: abish.in";
         break;
       case "clear":
         setHistory([]);

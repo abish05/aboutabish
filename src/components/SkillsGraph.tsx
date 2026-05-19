@@ -6,14 +6,14 @@ import { usePortfolio } from "@/context/PortfolioContext";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  { name: "Networking", category: "core", color: "border-blue-500", text: "text-blue-400" },
+  { name: "SaaS Development", category: "core", color: "border-blue-500", text: "text-blue-400" },
+  { name: "Web Development", category: "programming", color: "border-cyan-500", text: "text-cyan-400" },
   { name: "Python", category: "programming", color: "border-yellow-500", text: "text-yellow-400" },
-  { name: "Routing & Switching", category: "network", color: "border-cyan-500", text: "text-cyan-400" },
-  { name: "Network Security", category: "security", color: "border-red-500", text: "text-red-400" },
-  { name: "System Admin", category: "admin", color: "border-purple-500", text: "text-purple-400" },
-  { name: "Digital Marketing", category: "marketing", color: "border-green-500", text: "text-green-400" },
-  { name: "UI/UX Design", category: "design", color: "border-pink-500", text: "text-pink-400" },
-  { name: "Problem Solving", category: "soft skill", color: "border-orange-500", text: "text-orange-400" },
+  { name: "Generative AI", category: "ai", color: "border-emerald-500", text: "text-emerald-400" },
+  { name: "Prompt Engineering", category: "ai", color: "border-indigo-500", text: "text-indigo-400" },
+  { name: "Networking", category: "network", color: "border-red-500", text: "text-red-400" },
+  { name: "Cloud & Hosting", category: "cloud", color: "border-purple-500", text: "text-purple-400" },
+  { name: "Git & GitHub", category: "tools", color: "border-pink-500", text: "text-pink-400" },
 ];
 
 export function SkillsGraph() {

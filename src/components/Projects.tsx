@@ -9,31 +9,49 @@ import { usePortfolio } from "@/context/PortfolioContext";
 const projectsData: Project[] = [
   {
     id: "campusos-ai",
-    title: "CampusOS AI Portal",
-    shortDesc: "AI-powered student management and placement portal.",
-    description: "A comprehensive university management system featuring real-time attendance logging, GPA tracking, AI-powered mock interview simulations, automated resume analysis, and a student-recruiter matching dashboard.",
-    architecture: "React -> Spring Boot Backend -> Neon PostgreSQL / Gemini API",
+    title: "CampusOS AI — Smart College & Placement Platform",
+    shortDesc: "AI-powered SaaS university management and placement portal.",
+    description: "Architected a Multi-Tenant SaaS platform with Role-Based Access Control (RBAC) for Super Admin, Admin, Faculty, and Student roles. Features an AI Resume Analyzer (ATS scoring, skill-gap analysis) and a real-time Interview Simulator generating domain-specific questions with instant feedback.",
+    architecture: "React.js -> Spring Boot -> PostgreSQL / Gemini API",
     impactMetrics: [
-      "Client-side Canvas image compression for optimized backend uploads",
-      "Dynamic role-based dashboards for students, staff, and admins",
-      "Automated attendance tracking and academic performance reporting"
+      "Architected Role-Based Access Control (RBAC) for Super Admin, Admin, Faculty, and Student roles using React.js, Java Spring Boot, and PostgreSQL",
+      "Integrated Gemini LLM for AI Resume Analyzer and a real-time Interview Simulator with instant feedback",
+      "Built automated attendance analytics and placement dashboards (Recharts) secured with JWT & BCrypt",
+      "Achieved 70% reduction in manual shortlisting, <200ms API response time, and 90+ Lighthouse score"
     ],
-    techStack: ["React", "Spring Boot", "PostgreSQL", "Docker", "Tailwind CSS"],
+    techStack: ["React.js", "Spring Boot", "PostgreSQL", "Gemini API", "JWT"],
     githubUrl: "https://github.com/abish05/campusos-ai",
     liveUrl: "https://campusosai.abish.in",
     imagePlaceholder: "bg-gradient-to-br from-blue-900 to-black",
     imageUrl: "/images/campusos.png"
   },
   {
+    id: "shining-star",
+    title: "Shining Star AC Service Website",
+    shortDesc: "Multi-service business website with WhatsApp booking integration.",
+    description: "Developed a multi-service website for a home appliances and AC service company using HTML, CSS, and JavaScript. Designed service pages for AC, refrigerator, electrical, and plumbing with contact form and WhatsApp booking.",
+    architecture: "HTML5 / CSS3 / Vanilla JavaScript -> WhatsApp Web Integration -> Vercel",
+    impactMetrics: [
+      "Developed a fully responsive multi-service landing page and booking system",
+      "Designed dedicated service pages for AC, refrigerator, electrical, and plumbing",
+      "Integrated secure contact forms and direct WhatsApp booking for instant client communication",
+      "Ensured mobile-first design and cross-browser compatibility for a seamless experience"
+    ],
+    techStack: ["HTML5", "CSS3", "JavaScript", "Vercel"],
+    githubUrl: "https://github.com/abish05",
+    liveUrl: "https://shining-star-nu.vercel.app",
+    imagePlaceholder: "bg-gradient-to-br from-cyan-900 to-black"
+  },
+  {
     id: "fti-website",
     title: "FutureTech Training Institute (FTI)",
-    shortDesc: "Futuristic Computer Training Institute website.",
-    description: "A premium, high-conversion landing page and student admission portal featuring a futuristic glassmorphic UI, responsive grids, course catalogs, and interactive student inquiries.",
-    architecture: "HTML5 / CSS3 / Vanilla JavaScript -> Formspree Integration -> Vercel",
+    shortDesc: "Freelance web development project for an early-stage startup.",
+    description: "Designed and developed a fully functional business website for an early-stage startup from scratch. Built responsive, mobile-friendly web pages, collaborated directly with the founders, and optimized page performance.",
+    architecture: "HTML5 / CSS3 / Vanilla JavaScript -> Formspree -> Vercel",
     impactMetrics: [
-      "Fully responsive modern glassmorphic interface",
-      "Streamlined direct admission inquiry flow",
-      "Optimized static pages for fast load speeds"
+      "Designed and developed a fully functional business website for an early-stage startup from scratch",
+      "Collaborated directly with the startup founders to gather requirements and deliver a client-aligned product",
+      "Ensured cross-browser compatibility and optimized page performance for better user experience"
     ],
     techStack: ["HTML5", "CSS3", "JavaScript", "Vercel"],
     githubUrl: "https://github.com/abish05/FTI-WEBSITE",

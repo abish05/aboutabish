@@ -32,15 +32,15 @@ export function AIChatbot() {
       const lowerInput = userMessage.toLowerCase();
 
       if (lowerInput.includes("skill") || lowerInput.includes("tech") || lowerInput.includes("stack")) {
-        botResponse = "Abish is highly skilled in Networking, Routing & Switching, Python, System Administration, and UI/UX Design.";
+        botResponse = "Abish is skilled in SaaS Development, Web Development (HTML/CSS/JS), Python, Generative AI, Prompt Engineering, Networking Fundamentals, Git/GitHub, and Cloud Hosting (Vercel/Netlify).";
       } else if (lowerInput.includes("experience") || lowerInput.includes("project") || lowerInput.includes("job")) {
-        botResponse = "He has worked as an IT Manager at TCS iON, a Network Admin at VSB, and a Junior UI/UX Designer at Octet Design Studio.";
-      } else if (lowerInput.includes("education") || lowerInput.includes("college") || lowerInput.includes("degree") || lowerInput.includes("study")) {
-        botResponse = "He is pursuing his Bachelor of Computer Science and Engineering at VSB College of Engineering (2023-2027).";
+        botResponse = "He has freelance experience developing business websites, such as the FTI Training Website in 2025. His featured projects include CampusOS AI (a SaaS college & placement portal) and the Shining Star AC Service Website.";
+      } else if (lowerInput.includes("education") || lowerInput.includes("college") || lowerInput.includes("degree") || lowerInput.includes("study") || lowerInput.includes("certif")) {
+        botResponse = "He is pursuing his Bachelor of Computer Science and Engineering at VSB College of Engineering (2023-2027). He also holds certifications in Networking Basics from Cisco Networking Academy (Jan 2026) and Professional Networking from HP Foundation.";
       } else if (lowerInput.includes("resume") || lowerInput.includes("cv")) {
         botResponse = "You can download his resume directly from the top of the page using the 'Download Resume' button.";
       } else if (lowerInput.includes("contact") || lowerInput.includes("hire") || lowerInput.includes("email") || lowerInput.includes("reach") || lowerInput.includes("phone")) {
-        botResponse = "You can reach him at abishstk@gmail.com, or call +91 7401608989.";
+        botResponse = "You can reach him at abishstk@gmail.com, or call 7401608989.";
       } else if (lowerInput.includes("hello") || lowerInput.includes("hi") || lowerInput.includes("hey")) {
         botResponse = "Hello! How can I help you learn more about Abish today?";
       }

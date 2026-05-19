@@ -2,27 +2,39 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Award } from "lucide-react";
+import { Award, GraduationCap } from "lucide-react";
 
 export function Certifications() {
-  const certs = [
+  const education = [
     {
-      title: "Bachelor of Computer Science and Engineering",
-      issuer: "VSB College of Engineering",
-      date: "2023 - 2027",
-      link: "#"
+      degree: "Bachelor of Computer Science and Engineering",
+      institution: "VSB College of Engineering",
+      period: "2023 - 2027 (Pursuing)",
+      details: [
+        "Focused on programming, software development, data structures, and networking fundamentals.",
+        "Completed hands-on projects in network administration and system management."
+      ]
     },
     {
-      title: "High School",
-      issuer: "SM Matric Hr Sec School",
-      date: "2022 - 2023",
-      link: "#"
+      degree: "Higher Secondary Certificate (High School)",
+      institution: "SM Matric Hr. Sec. School",
+      period: "2022 - 2023",
+      details: [
+        "Completed secondary education with a strong academic and analytical foundation."
+      ]
+    }
+  ];
+
+  const certifications = [
+    {
+      title: "Networking Basics",
+      issuer: "Cisco Networking Academy",
+      date: "Jan 2026"
     },
     {
-      title: "Network Administration Excellence Award",
-      issuer: "Academic Project",
-      date: "Recent",
-      link: "#"
+      title: "Professional Networking for Career Growth",
+      issuer: "HP LIFE / HP Foundation",
+      date: "Jan 2026"
     }
   ];
 
@@ -32,26 +44,60 @@ export function Certifications() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        className="space-y-12"
       >
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-          <span className="text-blue-500">06.</span> Education & Awards
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {certs.map((cert, i) => (
-            <div key={i} className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Award size={64} className="text-blue-500" />
-              </div>
-              <div className="relative z-10">
-                <div className="p-3 bg-blue-500/10 rounded-lg inline-block mb-4">
-                  <Award size={20} className="text-blue-400" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Education Column */}
+          <div>
+            <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
+              <span className="text-blue-500">06.</span> Education
+            </h2>
+            <div className="space-y-6">
+              {education.map((edu, i) => (
+                <div key={i} className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden">
+                  <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <GraduationCap size={64} className="text-blue-500" />
+                  </div>
+                  <div className="relative z-10">
+                    <div className="p-3 bg-blue-500/10 rounded-lg inline-block mb-4">
+                      <GraduationCap size={20} className="text-blue-400" />
+                    </div>
+                    <h3 className="text-lg font-bold mb-1 text-gray-200">{edu.degree}</h3>
+                    <p className="text-sm text-blue-400 mb-3">{edu.institution} • {edu.period}</p>
+                    <ul className="list-disc list-inside text-sm text-gray-400 space-y-1.5">
+                      {edu.details.map((detail, dIdx) => (
+                        <li key={dIdx}>{detail}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold mb-1 text-gray-200">{cert.title}</h3>
-                <p className="text-sm text-gray-400 mb-4">{cert.issuer} • {cert.date}</p>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Certifications Column */}
+          <div>
+            <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
+              <span className="text-blue-500">07.</span> Certifications
+            </h2>
+            <div className="space-y-6">
+              {certifications.map((cert, i) => (
+                <div key={i} className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden">
+                  <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <Award size={64} className="text-blue-500" />
+                  </div>
+                  <div className="relative z-10">
+                    <div className="p-3 bg-blue-500/10 rounded-lg inline-block mb-4">
+                      <Award size={20} className="text-blue-400" />
+                    </div>
+                    <h3 className="text-lg font-bold mb-1 text-gray-200">{cert.title}</h3>
+                    <p className="text-sm text-blue-400 mb-1">{cert.issuer}</p>
+                    <p className="text-xs text-gray-400">{cert.date}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </motion.div>
     </section>

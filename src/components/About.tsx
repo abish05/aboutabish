@@ -7,14 +7,14 @@ import { Server, Code2 } from "lucide-react";
 export function About() {
   const features = [
     {
-      icon: <Server className="text-blue-500" size={24} />,
-      title: "Network Admin",
-      description: "Managing network capacity, diagnosing issues, and providing support for hubs, bridges, and routers.",
+      icon: <Code2 className="text-blue-500" size={24} />,
+      title: "Software Developer",
+      description: "Building robust web applications and SaaS platforms, integrating AI models/LLM services, and writing clean, maintainable code.",
     },
     {
-      icon: <Code2 className="text-blue-500" size={24} />,
-      title: "UI/UX Design",
-      description: "Creating clean, user-focused designs through research, wireframes, prototypes, and high-fidelity UI.",
+      icon: <Server className="text-blue-500" size={24} />,
+      title: "Network Engineer",
+      description: "Strong grounding in networking fundamentals, routing & switching, system administration, and network troubleshooting.",
     },
   ];
 
@@ -32,10 +32,10 @@ export function About() {
         
         <div className="glass-panel rounded-2xl p-8 mb-12">
           <p className="text-gray-300 leading-relaxed text-lg mb-6">
-            Motivated and detail-oriented graduate with strong knowledge of Networking and Python, excellent communication skills, and leadership experience. A quick learner and adaptable team player seeking an entry-level role in a reputed organization to contribute technical skills and grow professionally.
+            Motivated and detail-oriented Computer Science & Engineering student with strong knowledge of web development, software engineering, and network fundamentals. Experienced in building responsive web applications, designing SaaS platforms, and integrating AI-powered features.
           </p>
           <p className="text-gray-400 leading-relaxed text-lg">
-            I am currently pursuing a Bachelor&apos;s degree in Computer Science and Engineering at VSB College of Engineering, with a focus on programming, software development, data structures, and problem-solving, alongside hands-on projects and technical learning.
+            I am currently pursuing a Bachelor&apos;s degree in Computer Science and Engineering at VSB College of Engineering (2023 - 2027). A quick learner and adaptable team player seeking an entry-level Software Developer role to contribute technical skills and grow professionally.
           </p>
         </div>
 

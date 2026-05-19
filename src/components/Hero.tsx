@@ -23,13 +23,13 @@ export function Hero() {
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
             Hi, I&apos;m <span className="text-gradient-primary">Abish A</span>
             <br />
-            <span className="text-gray-300">Network Engineer.</span>
+            <span className="text-gray-300">Software Developer.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl leading-relaxed">
             {isRecruiterMode 
-              ? "Motivated and detail-oriented graduate with strong knowledge of Networking and Python, excellent communication skills, and leadership experience."
-              : "I am a quick learner and adaptable team player seeking an entry-level role to contribute technical skills and grow professionally, specializing in networking, system administration, and UI/UX design."
+              ? "Motivated and detail-oriented Computer Science & Engineering student with strong knowledge of web development, software engineering, and network fundamentals. Experienced in building responsive web applications, designing SaaS platforms, and integrating AI-powered features."
+              : "I am a quick learner and adaptable team player seeking an entry-level Software Developer role to contribute technical skills and grow professionally, specializing in SaaS development, cloud computing, and AI-powered systems."
             }
           </p>
 
