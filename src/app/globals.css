@@ -10,7 +10,22 @@
   --color-glass-border: rgba(255, 255, 255, 0.1);
   --font-sans: var(--font-geist-sans), Inter, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
+
+  --animate-morph: morph 8s ease-in-out infinite;
+
+  @keyframes morph {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
 }
+
 
 :root {
   --background: #050505;
