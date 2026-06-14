@@ -69,13 +69,13 @@ export function Hero() {
         </div>
 
         <div className="w-full max-w-xs mx-auto md:mx-0">
-          <div className="relative h-72 w-72 md:h-80 md:w-80 [mask-image:linear-gradient(to_bottom,black_75%,transparent_95%)] [-webkit-mask-image:linear-gradient(to_bottom,black_75%,transparent_95%)]">
+          <div className="relative h-80 w-80 md:h-96 md:w-96 [mask-image:linear-gradient(to_bottom,black_88%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_88%,transparent_98%)]">
             <Image
               src="/profile.jpg"
               alt="Abish A"
               fill
               className="object-contain"
-              sizes="(max-width: 768px) 100vw, 320px"
+              sizes="(max-width: 768px) 100vw, 384px"
               priority
             />
           </div>
