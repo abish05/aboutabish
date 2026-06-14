@@ -69,12 +69,12 @@ export function Hero() {
         </div>
 
         <div className="w-full max-w-xs mx-auto md:mx-0">
-          <div className="relative h-72 w-72 md:h-80 md:w-80 rounded-2xl overflow-hidden">
+          <div className="relative h-72 w-72 md:h-80 md:w-80">
             <Image
               src="/profile.jpg"
               alt="Abish A"
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 320px"
               priority
             />
