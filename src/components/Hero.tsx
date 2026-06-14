@@ -69,7 +69,7 @@ export function Hero() {
         </div>
 
         <div className="w-full max-w-xs mx-auto md:mx-0">
-          <div className="relative h-72 w-72 md:h-80 md:w-80 rounded-2xl overflow-hidden bg-slate-100 shadow-sm">
+          <div className="relative h-72 w-72 md:h-80 md:w-80 overflow-hidden mix-blend-multiply">
             <Image
               src="/profile.jpg"
               alt="Abish A"
