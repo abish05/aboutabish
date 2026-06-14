@@ -28,7 +28,7 @@ export function Hero() {
 
           <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
             {isRecruiterMode 
-              ? "Motivated and detail-oriented Computer Science & Engineering student with strong knowledge of web development, software engineering, and network fundamentals. Experienced in building responsive web applications, designing SaaS platforms, and integrating AI-powered features."
+              ? "Motivated and detail-oriented Computer Science & Engineering student with strong knowledge of web development, software engineering, and network fundamentals. Experienced in building responsive web applications, designing SaaS platforms, and integrating AI-powered features. Excellent communication and analytical skills with proven leadership experience. Quick learner and adaptable team player seeking an entry-level Software Developer role to contribute technical skills and grow professionally."
               : "I am a quick learner and adaptable team player seeking an entry-level Software Developer role to contribute technical skills and grow professionally, specializing in SaaS development, cloud computing, and AI-powered systems."
             }
           </p>

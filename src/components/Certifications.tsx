@@ -8,11 +8,12 @@ export function Certifications() {
   const education = [
     {
       degree: "Bachelor of Computer Science and Engineering",
-      institution: "VSB College of Engineering",
+      institution: "VSB College of Engineering Technical Campus",
       period: "2023 - 2027 (Pursuing)",
       details: [
         "Focused on programming, software development, data structures, and networking fundamentals.",
-        "Completed hands-on projects in network administration and system management."
+        "Completed hands-on projects in network administration and system management.",
+        "Academic standing: CGPA 7.6"
       ]
     },
     {

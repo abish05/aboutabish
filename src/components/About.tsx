@@ -32,10 +32,10 @@ export function About() {
         
         <div className="glass-panel rounded-2xl p-8 mb-12">
           <p className="text-gray-700 leading-relaxed text-lg mb-6">
-            Motivated and detail-oriented Computer Science & Engineering student with strong knowledge of web development, software engineering, and network fundamentals. Experienced in building responsive web applications, designing SaaS platforms, and integrating AI-powered features.
+            Motivated and detail-oriented Computer Science & Engineering student with strong knowledge of web development, software engineering, and network fundamentals. Experienced in building responsive web applications, designing SaaS platforms, and integrating AI-powered features. Excellent communication and analytical skills with proven leadership experience.
           </p>
           <p className="text-gray-600 leading-relaxed text-lg">
-            I am currently pursuing a Bachelor&apos;s degree in Computer Science and Engineering at VSB College of Engineering (2023 - 2027). A quick learner and adaptable team player seeking an entry-level Software Developer role to contribute technical skills and grow professionally.
+            I am currently pursuing a Bachelor&apos;s degree in Computer Science and Engineering at VSB College of Engineering Technical Campus (2023 - 2027) with a CGPA of 7.6. A quick learner and adaptable team player seeking an entry-level Software Developer role to contribute technical skills and grow professionally.
           </p>
         </div>
 

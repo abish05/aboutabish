@@ -66,7 +66,7 @@ export function Terminal() {
         );
         break;
       case "experience":
-        output = "Freelance Web Developer @ FTI Training (2025) — Designed and developed a fully functional business website from scratch using HTML, CSS, JavaScript.";
+        output = "Freelance Web Developer | FTI Training (ftitraining.in) 2026 — Designed and developed a fully functional business website for an early-stage startup from scratch. Built responsive, mobile-friendly web pages using HTML, CSS, and JavaScript.";
         break;
       case "github":
         output = "Active open-source contributions. Real-time metrics loaded dynamically via GitHub API on the main page.";

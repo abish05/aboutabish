@@ -11,13 +11,13 @@ const projectsData: Project[] = [
     id: "campusos-ai",
     title: "CampusOS AI — Smart College & Placement Platform",
     shortDesc: "AI-powered SaaS university management and placement portal.",
-    description: "Architected a Multi-Tenant SaaS platform with Role-Based Access Control (RBAC) for Super Admin, Admin, Faculty, and Student roles. Features an AI Resume Analyzer (ATS scoring, skill-gap analysis) and a real-time Interview Simulator generating domain-specific questions with instant feedback.",
+    description: "Architected a multi-tenant SaaS platform with Role-Based Access Control (RBAC) for Super Admin, Admin, Faculty, and Student roles using React.js, Java Spring Boot, and PostgreSQL.",
     architecture: "React.js -> Spring Boot -> PostgreSQL / Gemini API",
     impactMetrics: [
-      "Architected Role-Based Access Control (RBAC) for Super Admin, Admin, Faculty, and Student roles using React.js, Java Spring Boot, and PostgreSQL",
-      "Integrated Gemini LLM for AI Resume Analyzer and a real-time Interview Simulator with instant feedback",
-      "Built automated attendance analytics and placement dashboards (Recharts) secured with JWT & BCrypt",
-      "Achieved 70% reduction in manual shortlisting, <200ms API response time, and 90+ Lighthouse score"
+      "Architected a multi-tenant SaaS platform with Role-Based Access Control (RBAC) for Super Admin, Admin, Faculty, and Student roles using React.js, Java Spring Boot, and PostgreSQL",
+      "Integrated Gemini LLM for an AI Resume Analyzer (ATS scoring, skill-gap analysis) and a real-time Interview Simulator generating domain-specific questions with instant feedback",
+      "Built automated attendance analytics, placement trend dashboards (Recharts), and secured 20+ REST API endpoints with JWT & BCrypt authentication",
+      "Achieved 70% reduction in manual shortlisting time, <200ms API response time, and 90+ Lighthouse score through optimized service layers and lazy loading"
     ],
     techStack: ["React.js", "Spring Boot", "PostgreSQL", "Gemini API", "JWT"],
     githubUrl: "https://github.com/abish05/campusos-ai",
@@ -35,7 +35,7 @@ const projectsData: Project[] = [
       "Developed a fully responsive multi-service landing page and booking system",
       "Designed dedicated service pages for AC, refrigerator, electrical, and plumbing",
       "Integrated secure contact forms and direct WhatsApp booking for instant client communication",
-      "Ensured mobile-first design and cross-browser compatibility for a seamless experience"
+      "Ensured mobile-first design and cross-browser compatibility for a seamless experience across all devices"
     ],
     techStack: ["HTML5", "CSS3", "JavaScript", "Vercel"],
     githubUrl: "https://github.com/abish05",
