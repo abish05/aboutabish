@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -27,6 +27,10 @@ export function Footer() {
           <a href="mailto:abishstk@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors">
             <Mail size={20} />
             <span className="sr-only">Email</span>
+          </a>
+          <a href="https://www.instagram.com/rio_abish?igsh=bXZsMmx5bWhzZjQ0&utm_source=qr" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <FaInstagram size={20} />
+            <span className="sr-only">Instagram</span>
           </a>
         </div>
       </div>

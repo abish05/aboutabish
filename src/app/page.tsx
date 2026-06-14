@@ -11,7 +11,7 @@ import { Projects } from "@/components/Projects";
 import { GithubAnalytics } from "@/components/GithubAnalytics";
 import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
-import { AIChatbot } from "@/components/AIChatbot";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Terminal } from "@/components/Terminal";
 
 export default function Home() {
@@ -42,8 +42,8 @@ export default function Home() {
         )}
       </main>
 
-      {/* Floating AI Assistant (Hidden in Terminal Mode) */}
-      {!isTerminalMode && <AIChatbot />}
+      {/* Floating Contact Button (Hidden in Terminal Mode) */}
+      {!isTerminalMode && <WhatsAppButton />}
 
       <Footer />
     </>
