@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="light scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground antialiased min-h-screen relative`}>
         <Providers>
           {children}

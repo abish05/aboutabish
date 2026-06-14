@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #050505;
-  --color-foreground: #fafafa;
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
   --color-primary: #0070f3;
   --color-primary-hover: #3291ff;
-  --color-electric: #00e5ff;
-  --color-glass: rgba(255, 255, 255, 0.05);
-  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-electric: #0070f3;
+  --color-glass: rgba(0, 0, 0, 0.02);
+  --color-glass-border: rgba(0, 0, 0, 0.06);
   --font-sans: var(--font-geist-sans), Inter, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 
@@ -28,8 +28,8 @@
 
 
 :root {
-  --background: #050505;
-  --foreground: #fafafa;
+  --background: #ffffff;
+  --foreground: #0f172a;
 }
 
 body {
@@ -50,11 +50,11 @@ body {
 }
 
 .glass-panel {
-  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* Custom Scrollbar */
@@ -67,19 +67,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #94a3b8;
 }
 
 /* Background Grid Pattern */
 .bg-grid-pattern {
   background-size: 40px 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
   mask-image: linear-gradient(to bottom, transparent, black, transparent);
   -webkit-mask-image: linear-gradient(to bottom, transparent, black, transparent);
 }
@@ -89,12 +89,13 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #fff, #888);
+  background-image: linear-gradient(90deg, #0f172a, #475569);
 }
 
 .text-gradient-primary {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #00e5ff, #0070f3);
+  background-image: linear-gradient(90deg, #0070f3, #00e5ff);
 }
+

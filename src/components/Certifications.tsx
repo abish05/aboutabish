@@ -52,23 +52,23 @@ export function Certifications() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Education Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-gray-200 flex items-center gap-2">
-              <GraduationCap size={24} className="text-blue-400" />
+            <h3 className="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-2">
+              <GraduationCap size={24} className="text-blue-600" />
               Education
             </h3>
             <div className="space-y-6">
               {education.map((edu, i) => (
-                <div key={i} className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden">
+                <div key={i} className="glass p-6 rounded-2xl border border-black/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden">
                   <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                     <GraduationCap size={64} className="text-blue-500" />
                   </div>
                   <div className="relative z-10">
                     <div className="p-3 bg-blue-500/10 rounded-lg inline-block mb-4">
-                      <GraduationCap size={20} className="text-blue-400" />
+                      <GraduationCap size={20} className="text-blue-600" />
                     </div>
-                    <h3 className="text-lg font-bold mb-1 text-gray-200">{edu.degree}</h3>
-                    <p className="text-sm text-blue-400 mb-3">{edu.institution} • {edu.period}</p>
-                    <ul className="list-disc list-inside text-sm text-gray-400 space-y-1.5">
+                    <h3 className="text-lg font-bold mb-1 text-gray-800">{edu.degree}</h3>
+                    <p className="text-sm text-blue-600 mb-3">{edu.institution} • {edu.period}</p>
+                    <ul className="list-disc list-inside text-sm text-gray-600 space-y-1.5">
                       {edu.details.map((detail, dIdx) => (
                         <li key={dIdx}>{detail}</li>
                       ))}
@@ -81,23 +81,23 @@ export function Certifications() {
 
           {/* Certifications Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-gray-200 flex items-center gap-2">
-              <Award size={24} className="text-blue-400" />
+            <h3 className="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-2">
+              <Award size={24} className="text-blue-600" />
               Certifications
             </h3>
             <div className="space-y-6">
               {certifications.map((cert, i) => (
-                <div key={i} className="glass p-6 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden">
+                <div key={i} className="glass p-6 rounded-2xl border border-black/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden">
                   <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                     <Award size={64} className="text-blue-500" />
                   </div>
                   <div className="relative z-10">
                     <div className="p-3 bg-blue-500/10 rounded-lg inline-block mb-4">
-                      <Award size={20} className="text-blue-400" />
+                      <Award size={20} className="text-blue-600" />
                     </div>
-                    <h3 className="text-lg font-bold mb-1 text-gray-200">{cert.title}</h3>
-                    <p className="text-sm text-blue-400 mb-1">{cert.issuer}</p>
-                    <p className="text-xs text-gray-400">{cert.date}</p>
+                    <h3 className="text-lg font-bold mb-1 text-gray-800">{cert.title}</h3>
+                    <p className="text-sm text-blue-600 mb-1">{cert.issuer}</p>
+                    <p className="text-xs text-gray-600">{cert.date}</p>
                   </div>
                 </div>
               ))}

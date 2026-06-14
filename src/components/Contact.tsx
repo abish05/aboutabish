@@ -51,7 +51,7 @@ export function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            <p className="text-gray-700 text-lg leading-relaxed mb-6">
               Currently open for new opportunities, collaborations, and interesting projects. 
               Whether you have a question or just want to say hi, my inbox is always open.
             </p>
@@ -59,31 +59,31 @@ export function Contact() {
             <div className="space-y-4">
               <a href="mailto:abishstk@gmail.com" className="flex items-center gap-4 p-4 glass rounded-xl hover:border-blue-500/30 transition-colors group">
                 <div className="p-3 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
-                  <Mail className="text-blue-400" size={24} />
+                  <Mail className="text-blue-600" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-200">Email Me</h4>
-                  <p className="text-sm text-gray-400">abishstk@gmail.com</p>
+                  <h4 className="font-semibold text-gray-800">Email Me</h4>
+                  <p className="text-sm text-gray-600">abishstk@gmail.com</p>
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-4 glass rounded-xl border-white/5">
+              <div className="flex items-center gap-4 p-4 glass rounded-xl border-black/5">
                 <div className="p-3 bg-green-500/10 rounded-lg">
-                  <span className="text-green-400 font-bold">#</span>
+                  <span className="text-green-600 font-bold">#</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-200">Phone</h4>
-                  <p className="text-sm text-gray-400">+91 7401608989</p>
+                  <h4 className="font-semibold text-gray-800">Phone</h4>
+                  <p className="text-sm text-gray-600">+91 7401608989</p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 p-4 glass rounded-xl border-white/5">
+              <div className="flex items-center gap-4 p-4 glass rounded-xl border-black/5">
                 <div className="p-3 bg-purple-500/10 rounded-lg">
-                  <span className="text-purple-400 font-bold">@</span>
+                  <span className="text-purple-600 font-bold">@</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-200">Location</h4>
-                  <p className="text-sm text-gray-400">Kanyakumari, Tamil Nadu</p>
+                  <h4 className="font-semibold text-gray-800">Location</h4>
+                  <p className="text-sm text-gray-600">Kanyakumari, Tamil Nadu</p>
                 </div>
               </div>
             </div>
@@ -91,35 +91,35 @@ export function Contact() {
 
           <form onSubmit={handleSubmit} className="glass-panel p-6 rounded-2xl flex flex-col gap-4 relative overflow-hidden">
             <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="text-sm text-gray-400 font-mono">Name</label>
+              <label htmlFor="name" className="text-sm text-gray-600 font-mono">Name</label>
               <input 
                 type="text" 
                 id="name" 
                 name="name"
                 required
-                className="bg-black/40 border border-white/10 rounded-lg p-3 text-gray-200 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
+                className="bg-black/[0.03] border border-black/10 rounded-lg p-3 text-gray-800 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                 placeholder="John Doe"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="email" className="text-sm text-gray-400 font-mono">Email</label>
+              <label htmlFor="email" className="text-sm text-gray-600 font-mono">Email</label>
               <input 
                 type="email" 
                 id="email" 
                 name="email"
                 required
-                className="bg-black/40 border border-white/10 rounded-lg p-3 text-gray-200 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
+                className="bg-black/[0.03] border border-black/10 rounded-lg p-3 text-gray-800 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                 placeholder="john@example.com"
               />
             </div>
             <div className="flex flex-col gap-2 mb-2">
-              <label htmlFor="message" className="text-sm text-gray-400 font-mono">Message</label>
+              <label htmlFor="message" className="text-sm text-gray-600 font-mono">Message</label>
               <textarea 
                 id="message" 
                 name="message"
                 required
                 rows={4}
-                className="bg-black/40 border border-white/10 rounded-lg p-3 text-gray-200 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all custom-scrollbar"
+                className="bg-black/[0.03] border border-black/10 rounded-lg p-3 text-gray-800 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all custom-scrollbar"
                 placeholder="Hello Abish..."
               />
             </div>

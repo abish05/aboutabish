@@ -23,10 +23,10 @@ export function Hero() {
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
             Hi, I&apos;m <span className="text-gradient-primary">Abish A</span>
             <br />
-            <span className="text-gray-300">Software Developer.</span>
+            <span className="text-gray-700">Software Developer.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
             {isRecruiterMode 
               ? "Motivated and detail-oriented Computer Science & Engineering student with strong knowledge of web development, software engineering, and network fundamentals. Experienced in building responsive web applications, designing SaaS platforms, and integrating AI-powered features."
               : "I am a quick learner and adaptable team player seeking an entry-level Software Developer role to contribute technical skills and grow professionally, specializing in SaaS development, cloud computing, and AI-powered systems."
@@ -52,7 +52,7 @@ export function Hero() {
                 href="https://github.com/abish05" 
                 target="_blank"
                 rel="noreferrer"
-                className="p-3 glass rounded-lg text-gray-300 hover:text-white hover:border-white/30 transition-all duration-300"
+                className="p-3 glass rounded-lg text-gray-600 hover:text-black hover:border-black/20 transition-all duration-300"
               >
                 <FaGithub size={22} />
               </a>
@@ -60,7 +60,7 @@ export function Hero() {
                 href="https://www.linkedin.com/in/abish-a-a12b30388"  
                 target="_blank"
                 rel="noreferrer"
-                className="p-3 glass rounded-lg text-gray-300 hover:text-blue-400 hover:border-blue-400/30 transition-all duration-300"
+                className="p-3 glass rounded-lg text-gray-600 hover:text-blue-600 hover:border-blue-600/20 transition-all duration-300"
               >
                 <FaLinkedin size={22} />
               </a>
@@ -69,7 +69,7 @@ export function Hero() {
         </div>
 
         <div className="w-full max-w-xs mx-auto md:mx-0">
-          <div className="relative h-72 w-72 md:h-80 md:w-80 animate-morph overflow-hidden border-2 border-electric/80 shadow-[0_0_40px_rgba(0,229,255,0.45)] bg-slate-900">
+          <div className="relative h-72 w-72 md:h-80 md:w-80 animate-morph overflow-hidden bg-slate-100">
             <Image
               src="/profile.jpg"
               alt="Abish A"

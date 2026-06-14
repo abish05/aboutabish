@@ -31,10 +31,10 @@ export function About() {
         </h2>
         
         <div className="glass-panel rounded-2xl p-8 mb-12">
-          <p className="text-gray-300 leading-relaxed text-lg mb-6">
+          <p className="text-gray-700 leading-relaxed text-lg mb-6">
             Motivated and detail-oriented Computer Science & Engineering student with strong knowledge of web development, software engineering, and network fundamentals. Experienced in building responsive web applications, designing SaaS platforms, and integrating AI-powered features.
           </p>
-          <p className="text-gray-400 leading-relaxed text-lg">
+          <p className="text-gray-600 leading-relaxed text-lg">
             I am currently pursuing a Bachelor&apos;s degree in Computer Science and Engineering at VSB College of Engineering (2023 - 2027). A quick learner and adaptable team player seeking an entry-level Software Developer role to contribute technical skills and grow professionally.
           </p>
         </div>
@@ -49,11 +49,11 @@ export function About() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="glass p-6 rounded-xl hover:border-blue-500/50 transition-colors duration-300 group"
             >
-              <div className="mb-4 p-3 bg-white/5 rounded-lg inline-block group-hover:bg-blue-500/10 transition-colors">
+              <div className="mb-4 p-3 bg-black/5 rounded-lg inline-block group-hover:bg-blue-500/10 transition-colors">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </div>

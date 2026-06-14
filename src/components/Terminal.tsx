@@ -97,7 +97,7 @@ export function Terminal() {
 
   return (
     <div 
-      className="w-full h-full glass-panel bg-[#050505]/95 rounded-xl border border-white/10 overflow-hidden flex flex-col font-mono text-sm shadow-2xl relative"
+      className="w-full h-full glass-panel bg-[#0f172a] rounded-xl border border-black/5 overflow-hidden flex flex-col font-mono text-sm shadow-2xl relative"
       onClick={() => inputRef.current?.focus()}
     >
       <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/5">

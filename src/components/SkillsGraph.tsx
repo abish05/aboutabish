@@ -6,14 +6,14 @@ import { usePortfolio } from "@/context/PortfolioContext";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  { name: "SaaS Development", category: "core", color: "border-blue-500", text: "text-blue-400" },
-  { name: "Web Development", category: "programming", color: "border-cyan-500", text: "text-cyan-400" },
-  { name: "Python", category: "programming", color: "border-yellow-500", text: "text-yellow-400" },
-  { name: "Generative AI", category: "ai", color: "border-emerald-500", text: "text-emerald-400" },
-  { name: "Prompt Engineering", category: "ai", color: "border-indigo-500", text: "text-indigo-400" },
-  { name: "Networking", category: "network", color: "border-red-500", text: "text-red-400" },
-  { name: "Cloud & Hosting", category: "cloud", color: "border-purple-500", text: "text-purple-400" },
-  { name: "Git & GitHub", category: "tools", color: "border-pink-500", text: "text-pink-400" },
+  { name: "SaaS Development", category: "core", color: "border-blue-500", text: "text-blue-600" },
+  { name: "Web Development", category: "programming", color: "border-cyan-500", text: "text-cyan-600" },
+  { name: "Python", category: "programming", color: "border-yellow-600", text: "text-yellow-600" },
+  { name: "Generative AI", category: "ai", color: "border-emerald-500", text: "text-emerald-600" },
+  { name: "Prompt Engineering", category: "ai", color: "border-indigo-500", text: "text-indigo-600" },
+  { name: "Networking", category: "network", color: "border-red-500", text: "text-red-600" },
+  { name: "Cloud & Hosting", category: "cloud", color: "border-purple-500", text: "text-purple-600" },
+  { name: "Git & GitHub", category: "tools", color: "border-pink-500", text: "text-pink-600" },
 ];
 
 export function SkillsGraph() {
@@ -34,8 +34,8 @@ export function SkillsGraph() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((skill) => (
-            <div key={skill.name} className="glass border-white/10 p-4 rounded-lg flex flex-col justify-center items-center text-center">
-              <span className="font-semibold text-gray-200">{skill.name}</span>
+            <div key={skill.name} className="glass border-black/5 p-4 rounded-lg flex flex-col justify-center items-center text-center">
+              <span className="font-semibold text-gray-800">{skill.name}</span>
               <span className="text-xs text-gray-500 mt-1 uppercase tracking-wider">{skill.category}</span>
             </div>
           ))}
@@ -80,7 +80,7 @@ export function SkillsGraph() {
                     x: { duration: duration + 0.5, repeat: Infinity, ease: "easeInOut", delay: delay }
                   }}
                   className={cn(
-                    "cursor-grab active:cursor-grabbing w-24 h-24 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center bg-black/40 backdrop-blur-md border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.3)] transition-colors hover:border-blue-500/50 hover:bg-blue-500/5",
+                    "cursor-grab active:cursor-grabbing w-24 h-24 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center bg-white/80 backdrop-blur-md border border-black/5 shadow-[0_0_15px_rgba(0,0,0,0.05)] transition-colors hover:border-blue-500/55 hover:bg-blue-500/5",
                   )}
                 >
                   <span className={cn("font-bold text-sm md:text-lg drop-shadow-md", skill.text)}>

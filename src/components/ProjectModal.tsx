@@ -53,14 +53,14 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto glass-panel bg-[#0a0a0a]/90 rounded-2xl shadow-2xl custom-scrollbar"
+            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto glass-panel bg-white/95 rounded-2xl shadow-2xl custom-scrollbar"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors z-10"
+              className="absolute top-4 right-4 p-2 rounded-full bg-black/5 hover:bg-black/10 transition-colors z-10"
             >
-              <X size={20} className="text-gray-300" />
+              <X size={20} className="text-gray-600" />
             </button>
 
             {/* Header Image Placeholder */}
@@ -70,20 +70,20 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                ) : (
                  <div className={`absolute inset-0 ${project.imagePlaceholder}`} />
                )}
-               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent z-0"></div>
-               <h2 className="text-3xl md:text-5xl font-bold text-white z-10 drop-shadow-lg">{project.title}</h2>
+               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-0"></div>
+               <h2 className="text-3xl md:text-5xl font-bold text-white z-10 drop-shadow-lg p-6 absolute bottom-0 left-0">{project.title}</h2>
             </div>
 
             <div className="p-6 md:p-8 space-y-8">
               {/* Links */}
               <div className="flex gap-4">
                 {project.githubUrl && (
-                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-sm font-medium">
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 bg-black/5 rounded-lg hover:bg-black/10 transition-colors text-sm font-medium text-gray-800">
                     <FaGithub size={16} /> Source Code
                   </a>
                 )}
                 {project.liveUrl && (
-                  <a href={project.liveUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                  <a href={project.liveUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium text-white">
                     <ExternalLink size={16} /> Live Demo
                   </a>
                 )}
@@ -91,10 +91,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
               {/* Description */}
               <div>
-                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-blue-400">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-blue-600">
                   <Activity size={20} /> Project Overview
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   {project.description}
                 </p>
               </div>
@@ -102,23 +102,23 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               {/* Architecture & Metrics */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-blue-400">
+                  <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-blue-600">
                     <Layers size={20} /> Architecture Flow
                   </h3>
-                  <div className="p-4 glass rounded-lg border border-white/5 text-gray-400 text-sm leading-relaxed font-mono">
+                  <div className="p-4 glass rounded-lg border border-black/5 text-gray-600 text-sm leading-relaxed font-mono">
                     {project.architecture}
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-blue-400">
+                  <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-blue-600">
                     <Activity size={20} /> Key Impact Metrics
                   </h3>
                   <ul className="space-y-3">
                     {project.impactMetrics.map((metric, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="text-blue-500 mt-1">▹</span>
-                        <span className="text-gray-300 text-sm">{metric}</span>
+                        <span className="text-blue-600 mt-1">▹</span>
+                        <span className="text-gray-700 text-sm">{metric}</span>
                       </li>
                     ))}
                   </ul>
@@ -127,10 +127,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
               {/* Tech Stack */}
               <div>
-                <h3 className="text-xl font-semibold mb-3 text-blue-400">Tech Stack</h3>
+                <h3 className="text-xl font-semibold mb-3 text-blue-600">Tech Stack</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono text-gray-300">
+                    <span key={tech} className="px-3 py-1 bg-black/5 border border-black/5 rounded-full text-xs font-mono text-gray-700">
                       {tech}
                     </span>
                   ))}

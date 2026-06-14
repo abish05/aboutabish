@@ -39,11 +39,11 @@ export function GithubAnalytics() {
 
   const getColor = (level: number) => {
     switch (level) {
-      case 4: return "bg-blue-500";
+      case 4: return "bg-blue-800";
       case 3: return "bg-blue-600";
-      case 2: return "bg-blue-800";
-      case 1: return "bg-blue-900/50";
-      default: return "bg-white/5";
+      case 2: return "bg-blue-400";
+      case 1: return "bg-blue-200";
+      default: return "bg-slate-100";
     }
   };
 
@@ -63,7 +63,7 @@ export function GithubAnalytics() {
           <div className="lg:col-span-2 glass-panel p-6 rounded-2xl flex flex-col">
             <div className="flex justify-between items-center mb-6">
               <h3 className="font-semibold flex items-center gap-2">
-                <GitCommit size={18} className="text-gray-400" />
+                <GitCommit size={18} className="text-gray-600" />
                 Contribution Graph
               </h3>
               <span className="text-sm font-mono text-gray-500">Last 365 Days</span>
@@ -74,7 +74,7 @@ export function GithubAnalytics() {
                 {data.contributions.map((level, i) => (
                   <div 
                     key={i} 
-                    className={`w-3 h-3 rounded-[2px] ${getColor(level as number)} transition-colors duration-300 hover:ring-2 hover:ring-white/50`}
+                    className={`w-3 h-3 rounded-[2px] ${getColor(level as number)} transition-colors duration-300 hover:ring-2 hover:ring-black/20`}
                     title={`Contribution Level: ${level}`}
                   />
                 ))}
@@ -89,7 +89,7 @@ export function GithubAnalytics() {
                 <Flame size={24} className="text-orange-500" />
               </div>
               <div>
-                <p className="text-sm text-gray-400 mb-1">Current Streak</p>
+                <p className="text-sm text-gray-600 mb-1">Current Streak</p>
                 <p className="text-2xl font-bold font-mono">
                   {data.loading ? "..." : `${data.streak} Days`}
                 </p>
@@ -101,7 +101,7 @@ export function GithubAnalytics() {
                 <GitPullRequest size={24} className="text-blue-500" />
               </div>
               <div>
-                <p className="text-sm text-gray-400 mb-1">Total PRs Merged</p>
+                <p className="text-sm text-gray-600 mb-1">Total PRs Merged</p>
                 <p className="text-2xl font-bold font-mono">
                   {data.loading ? "..." : data.prs}
                 </p>
@@ -113,7 +113,7 @@ export function GithubAnalytics() {
                 <Star size={24} className="text-yellow-500" />
               </div>
               <div>
-                <p className="text-sm text-gray-400 mb-1">Total Stars</p>
+                <p className="text-sm text-gray-600 mb-1">Total Stars</p>
                 <p className="text-2xl font-bold font-mono">
                   {data.loading ? "..." : data.stars}
                 </p>

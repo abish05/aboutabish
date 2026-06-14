@@ -102,7 +102,7 @@ export function Projects() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               onClick={() => setSelectedProject(project)}
-              className="group cursor-pointer glass-panel rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-300 border border-white/5 hover:border-blue-500/30 hover:shadow-[0_10px_30px_rgba(0,112,243,0.15)] flex flex-col h-full"
+              className="group cursor-pointer glass-panel rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-300 border border-black/5 hover:border-blue-500/30 hover:shadow-[0_10px_30px_rgba(0,112,243,0.08)] flex flex-col h-full"
             >
               <div className="h-48 w-full relative overflow-hidden">
                 {project.imageUrl ? (
@@ -110,17 +110,17 @@ export function Projects() {
                 ) : (
                   <div className={`w-full h-full ${project.imagePlaceholder}`} />
                 )}
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300"></div>
                 <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <ArrowUpRight size={16} className="text-white" />
                 </div>
               </div>
               
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                <p className="text-gray-400 text-sm mb-4 flex-grow">{project.shortDesc}</p>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">{project.title}</h3>
+                <p className="text-gray-600 text-sm mb-4 flex-grow">{project.shortDesc}</p>
                 
-                <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-white/5">
+                <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-black/5">
                   {project.techStack.slice(0, 3).map((tech) => (
                     <span key={tech} className="text-xs font-mono text-gray-500">
                       {tech}

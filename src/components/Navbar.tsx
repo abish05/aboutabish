@@ -9,20 +9,20 @@ export function Navbar() {
   const { isRecruiterMode, toggleRecruiterMode, isTerminalMode, toggleTerminalMode } = usePortfolio();
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all duration-300">
+    <nav className="fixed top-0 w-full z-50 glass border-b border-black/5 px-6 py-4 flex justify-between items-center transition-all duration-300">
       <div className="text-xl font-bold tracking-tighter text-foreground flex items-center gap-2">
-        <span className="text-blue-500">ABISH A</span>
+        <span className="text-blue-600">ABISH A</span>
         <span className="text-gray-500 font-mono text-sm ml-2 hidden sm:inline-block">v1.0.0</span>
       </div>
 
       <div className="flex items-center gap-4">
         {/* Navigation Links for standard mode */}
         {!isRecruiterMode && (
-          <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300 mr-4">
-            <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
-            <a href="#skills" className="hover:text-blue-400 transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
-            <a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a>
+          <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600 mr-4">
+            <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
+            <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
+            <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
+            <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
           </div>
         )}
 
@@ -31,7 +31,7 @@ export function Navbar() {
           onClick={toggleTerminalMode}
           className={cn(
             "p-2 rounded-md transition-all duration-300",
-            isTerminalMode ? "bg-blue-500/20 text-blue-400" : "hover:bg-white/10 text-gray-400"
+            isTerminalMode ? "bg-blue-500/10 text-blue-600" : "hover:bg-black/5 text-gray-500"
           )}
           aria-label="Toggle Terminal Mode"
           title="Terminal Mode"
@@ -43,7 +43,7 @@ export function Navbar() {
           onClick={toggleRecruiterMode}
           className={cn(
             "p-2 rounded-md transition-all duration-300 flex items-center gap-2 text-sm",
-            isRecruiterMode ? "bg-green-500/20 text-green-400" : "hover:bg-white/10 text-gray-400"
+            isRecruiterMode ? "bg-green-500/10 text-green-600" : "hover:bg-black/5 text-gray-500"
           )}
           aria-label="Toggle Recruiter Mode"
           title="Recruiter Mode"

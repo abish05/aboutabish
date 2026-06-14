@@ -65,22 +65,22 @@ export function AIChatbot() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-6 right-6 z-50 w-full max-w-[350px] sm:max-w-[400px] h-[500px] max-h-[80vh] glass-panel bg-[#0a0a0a]/95 border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            className="fixed bottom-6 right-6 z-50 w-full max-w-[350px] sm:max-w-[400px] h-[500px] max-h-[80vh] glass-panel bg-white/95 border border-black/5 rounded-2xl shadow-2xl flex flex-col overflow-hidden text-gray-800"
           >
             {/* Header */}
-            <div className="p-4 border-b border-white/10 flex justify-between items-center bg-blue-900/20">
+            <div className="p-4 border-b border-black/5 flex justify-between items-center bg-blue-50/50">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                  <Bot size={18} className="text-blue-400" />
+                <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center">
+                  <Bot size={18} className="text-blue-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm">AI Recruiter Assistant</h3>
-                  <p className="text-xs text-green-400 flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-green-400 inline-block"></span> Online
+                  <p className="text-xs text-green-600 flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span> Online
                   </p>
                 </div>
               </div>
-              <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/10 rounded-full transition-colors text-gray-400 hover:text-white">
+              <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-black/5 rounded-full transition-colors text-gray-500 hover:text-black">
                 <X size={18} />
               </button>
             </div>
@@ -89,10 +89,10 @@ export function AIChatbot() {
             <div className="flex-1 p-4 overflow-y-auto custom-scrollbar flex flex-col gap-4">
               {messages.map((msg, i) => (
                 <div key={i} className={`flex gap-3 max-w-[85%] ${msg.role === 'user' ? 'self-end flex-row-reverse' : 'self-start'}`}>
-                  <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center mt-1 ${msg.role === 'user' ? 'bg-gray-800' : 'bg-blue-900/50'}`}>
-                    {msg.role === 'user' ? <User size={14} className="text-gray-400" /> : <Bot size={14} className="text-blue-400" />}
+                  <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center mt-1 ${msg.role === 'user' ? 'bg-gray-100' : 'bg-blue-50'}`}>
+                    {msg.role === 'user' ? <User size={14} className="text-gray-600" /> : <Bot size={14} className="text-blue-600" />}
                   </div>
-                  <div className={`p-3 rounded-2xl text-sm leading-relaxed ${msg.role === 'user' ? 'bg-blue-600 text-white rounded-tr-sm' : 'bg-white/10 text-gray-200 rounded-tl-sm'}`}>
+                  <div className={`p-3 rounded-2xl text-sm leading-relaxed ${msg.role === 'user' ? 'bg-blue-600 text-white rounded-tr-sm' : 'bg-black/5 text-gray-800 rounded-tl-sm'}`}>
                     {msg.content}
                   </div>
                 </div>
@@ -101,19 +101,19 @@ export function AIChatbot() {
             </div>
 
             {/* Input Area */}
-            <div className="p-4 border-t border-white/10 bg-black/40">
+            <div className="p-4 border-t border-black/5 bg-black/[0.01]">
               <form onSubmit={handleSend} className="flex gap-2">
                 <input
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Ask about Abish..."
-                  className="flex-1 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-500/50 text-gray-200"
+                  className="flex-1 bg-black/[0.03] border border-black/10 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-500/50 text-gray-800"
                 />
                 <button
                   type="submit"
                   disabled={!input.trim()}
-                  className="p-2 bg-blue-600 hover:bg-blue-500 disabled:bg-gray-800 disabled:text-gray-500 text-white rounded-full transition-colors flex items-center justify-center flex-shrink-0"
+                  className="p-2 bg-blue-600 hover:bg-blue-500 disabled:bg-gray-100 disabled:text-gray-400 text-white rounded-full transition-colors flex items-center justify-center flex-shrink-0"
                 >
                   <Send size={18} className="ml-0.5" />
                 </button>
