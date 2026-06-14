@@ -69,7 +69,7 @@ export function Hero() {
         </div>
 
         <div className="w-full max-w-xs mx-auto md:mx-0">
-          <div className="relative h-72 w-72 md:h-80 md:w-80">
+          <div className="relative h-72 w-72 md:h-80 md:w-80 [mask-image:linear-gradient(to_bottom,black_75%,transparent_95%)] [-webkit-mask-image:linear-gradient(to_bottom,black_75%,transparent_95%)]">
             <Image
               src="/profile.jpg"
               alt="Abish A"
