@@ -80,13 +80,13 @@ export function SkillsGraph() {
                     x: { duration: duration + 0.5, repeat: Infinity, ease: "easeInOut", delay: delay }
                   }}
                   className={cn(
-                    "cursor-grab active:cursor-grabbing w-24 h-24 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center bg-white/80 backdrop-blur-md border border-black/5 shadow-[0_0_15px_rgba(0,0,0,0.05)] transition-colors hover:border-blue-500/55 hover:bg-blue-500/5",
+                    "cursor-grab active:cursor-grabbing w-24 h-24 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center text-center p-3 bg-white/80 backdrop-blur-md border border-black/5 shadow-[0_0_15px_rgba(0,0,0,0.05)] transition-colors hover:border-blue-500/55 hover:bg-blue-500/5",
                   )}
                 >
-                  <span className={cn("font-bold text-sm md:text-lg drop-shadow-md", skill.text)}>
+                  <span className={cn("font-bold text-xs md:text-sm leading-tight drop-shadow-sm mb-1", skill.text)}>
                     {skill.name}
                   </span>
-                  <span className="text-[10px] md:text-xs text-gray-500 mt-1 uppercase tracking-wider">
+                  <span className="text-[8px] md:text-[10px] text-gray-500 uppercase tracking-wider leading-none">
                     {skill.category}
                   </span>
                 </motion.div>
