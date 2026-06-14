@@ -5,6 +5,8 @@ import { Terminal, Briefcase } from "lucide-react";
 import { usePortfolio } from "@/context/PortfolioContext";
 import { cn } from "@/lib/utils";
 
+import packageInfo from "../../package.json";
+
 export function Navbar() {
   const { isRecruiterMode, toggleRecruiterMode, isTerminalMode, toggleTerminalMode } = usePortfolio();
 
@@ -12,7 +14,7 @@ export function Navbar() {
     <nav className="fixed top-0 w-full z-50 glass border-b border-black/5 px-6 py-4 flex justify-between items-center transition-all duration-300">
       <div className="text-xl font-bold tracking-tighter text-foreground flex items-center gap-2">
         <span className="text-blue-600">ABISH A</span>
-        <span className="text-gray-500 font-mono text-sm ml-2 hidden sm:inline-block">v1.0.0</span>
+        <span className="text-gray-500 font-mono text-sm ml-2 hidden sm:inline-block">v{packageInfo.version}</span>
       </div>
 
       <div className="flex items-center gap-4">
